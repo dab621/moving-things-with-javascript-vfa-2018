@@ -10,7 +10,6 @@
       <div id="dodger" style="bottom: 0px; left: 180px;"></div>
     </div>
     <script>
-     document.addEventListener('keydown', function(e) { console.log(e.which)})
      var dodger =
      document.getElementById ('dodger')
      function moveDodgerRight() {
@@ -21,6 +20,11 @@
     dodger.style.right = `${right + 1}px`
   }
 }
+document.addEventListener('keydown', function(e) {
+  if (e.which ===37) {
+    moveDodgerRight()
+  }
+})
       // your code here
     </script>
   </body>
